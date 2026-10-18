@@ -1,0 +1,441 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #1e293b;
+}
+
+/* ===== Header ===== */
+.header {
+    background-color: #0f172a;
+    color: white;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.month-selector {
+    background: transparent;
+    border: 1px solid #334155;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.month-selector:hover {
+    background: #1e293b;
+}
+
+/* ===== Main Container ===== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* ===== Page Header ===== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.page-title h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.page-title p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #0f172a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e293b;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background-color: #f8fafc;
+}
+
+/* ===== Layout ===== */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: white;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+}
+
+.tab .badge {
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 7px;
+    border-radius: 999px;
+    margin-left: 6px;
+}
+
+/* ===== Lista de Contas ===== */
+.lista-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.lista-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.lista-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sort {
+    font-size: 0.85rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* Conta Item */
+.conta-item {
+    display: grid;
+    grid-template-columns: 40px 1fr 120px 110px 100px;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 12px;
+    transition: background 0.15s;
+}
+
+.conta-item:last-child {
+    border-bottom: none;
+}
+
+.conta-item:hover {
+    background: #f8fafc;
+}
+
+.status-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.status-icon.alerta {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.status-icon.ok {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.categoria-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    margin-right: 12px;
+}
+
+.categoria-icon.moradia { background: #ef4444; }
+.categoria-icon.servicos { background: #22c55e; }
+.categoria-icon.agua { background: #ef4444; }
+.categoria-icon.internet { background: #3b82f6; }
+.categoria-icon.saude { background: #8b5cf6; }
+.categoria-icon.financeiro { background: #f59e0b; }
+.categoria-icon.transporte { background: #f59e0b; }
+.categoria-icon.educacao { background: #14b8a6; }
+
+.conta-info {
+    display: flex;
+    align-items: center;
+}
+
+.conta-nome {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.conta-categoria {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.vencimento {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.vencimento span {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.valor {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+.valor.pendente {
+    color: #0f172a;
+}
+
+.valor.pago {
+    color: #16a34a;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-badge.pendente {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.status-badge.pago {
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+/* Footer da lista */
+.lista-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: #f8fafc;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.lista-footer .pendentes {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.lista-footer .pagas {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+/* ===== Cards Laterais ===== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.card-icon.previsto { background: #0f172a; }
+.card-icon.pago { background: #22c55e; }
+.card-icon.saldo { background: #3b82f6; }
+
+.card-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.card-month {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-left: auto;
+}
+
+.card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.card-value.pago {
+    color: #16a34a;
+}
+
+.card-value.saldo {
+    color: #2563eb;
+}
+
+.card-desc {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.4;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 960px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .conta-item {
+        grid-template-columns: 40px 1fr 90px;
+        gap: 8px;
+    }
+
+    .vencimento, .status-badge {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
